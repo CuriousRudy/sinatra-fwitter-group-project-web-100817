@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User</title>
+  </head>
+  <body>
+    <h1><%=@user.username%>'s tweets</h1>
+    <%@user.tweets.each_with_index do  |tweet, index|%>
+    <div>
+      <a href="/tweets/<%=index + 1%>">Tweet number <%=index + 1%></a><br>
+      <p><%=tweet.content%></p>
+    </div><br>
+    <%end%>
+  </body>
+</html>
